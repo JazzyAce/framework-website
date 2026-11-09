@@ -1,3 +1,4 @@
+import UpgradeButton from "../components/UpgradeButton";
 import { auth } from "../../lib/auth/server";
 import { redirect } from "next/navigation";
 import Link from "next/link";
@@ -30,6 +31,7 @@ export default async function DashboardPage() {
         </Link>
       </p>
       <Link href="/auth/sign-out">Sign out</Link>
+      <UpgradeButton />
     </main>
   );
 }
