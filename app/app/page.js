@@ -1,69 +1,14 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+import Link from "next/link";
+export const metadata = { title: "FRAMEWORK — Make every shot count", description: "AI screenplay breakdowns and shot lists for student and independent filmmakers." };
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.js</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+  return <div className="fw">
+    <style>{`
+.fw{background:#0c1011;color:#ecebe3;min-height:100vh;font-family:Arial,sans-serif}.fw header,.fw section,.fw footer{padding:30px 6vw;max-width:1500px;margin:auto}.fw header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #303536}.fw .brand{font-size:24px;font-weight:900;letter-spacing:-1px}.fw .accent{color:#daf578}.fw nav{display:flex;align-items:center;gap:28px;font-size:14px}.fw .button{display:inline-block;background:#daf578;color:#101410;padding:16px 24px;font-weight:700;border-radius:3px}.fw .hero{padding-block:90px;display:grid;grid-template-columns:1.25fr 1fr;gap:60px;align-items:center}.fw .eyebrow{font-size:11px;letter-spacing:2px;color:#aeb9b0;font-weight:700}.fw h1{font-size:clamp(48px,6.4vw,94px);letter-spacing:-4px;line-height:1.02;margin:27px 0}.fw h1 em{font-family:Georgia,serif;font-weight:400;color:#daf578}.fw .intro{color:#abb5ae;font-size:17px;line-height:1.7;max-width:510px}.fw .actions{display:flex;align-items:center;gap:25px;margin:32px 0}.fw .caption{font-size:10px;letter-spacing:1.5px;color:#a6b2a9}.fw .preview{border:1px solid #3d4740;border-radius:9px;background:#161e19;box-shadow:0 30px 90px #0008;transform:rotate(-2deg)}.fw .bar{border-bottom:1px solid #364139;padding:16px;font-size:10px;color:#a4b3a7;letter-spacing:1px}.fw .previewBody{padding:28px}.fw .preview h2{font-size:28px;margin:13px 0 25px}.fw .scene{padding:22px;background:#e9e7d8;color:#26352b;font-family:monospace;line-height:1.9;font-size:12px;margin:20px 0}.fw .shot{display:flex;gap:16px;border-top:1px solid #344039;padding:16px 0;font-size:13px}.fw .shot span{color:#daf578;font-family:monospace}.fw .shot small{display:block;color:#a2b1a5;margin-top:6px}.fw .strip{border-block:1px solid #394131;text-align:center;color:#daf578;font-size:12px;letter-spacing:4px;padding:24px}.fw .tools{padding-block:75px}.fw h2{font-size:clamp(30px,3.7vw,48px);letter-spacing:-1.5px;margin:17px 0 30px}.fw .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.fw article{border-top:1px solid #485046;padding:24px 0}.fw article h3{font-size:21px;margin:18px 0}.fw article p,.fw .offer p{color:#a9b5ab;font-size:15px;line-height:1.8}.fw .number{font-family:monospace;color:#daf578}.fw .offer{display:flex;justify-content:space-between;align-items:center;gap:30px;background:#192219;padding-block:50px}.fw footer{display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#9da79e}.fw a:focus-visible{outline:3px solid #daf578;outline-offset:6px}@media(max-width:800px){.fw .hero{grid-template-columns:1fr;padding-top:45px;gap:35px}.fw h1{letter-spacing:-2px}.fw .cards{grid-template-columns:1fr}.fw nav{gap:15px}.fw nav .optional{display:none}.fw .offer{align-items:flex-start;flex-direction:column}.fw .preview{transform:none}.fw footer{flex-direction:column}.fw .strip{letter-spacing:2px;font-size:10px}}
+    `}</style>
+    <header><Link className="brand" href="/">FRAMEWORK<span className="accent">.</span></Link><nav aria-label="Main navigation"><a className="optional" href="#tools">The toolkit</a><Link href="/auth/sign-in">Log in</Link><Link className="button" href="/auth/sign-up">Get started ↗</Link></nav></header>
+    <main><section className="hero"><div><p className="eyebrow">YOUR STORY. YOUR VISION. YOUR FRAMEWORK.</p><h1>Great films<br/>start <em>before</em><br/>the camera rolls<span className="accent">.</span></h1><p className="intro">Turn your screenplay into a clear plan for set. AI-powered scene breakdowns and shot lists, built for student filmmakers and independent crews.</p><div className="actions"><Link className="button" href="/auth/sign-up">Start your next scene ↗</Link><Link href="/dashboard">Open workspace →</Link></div><p className="caption">LESS ADMIN. MORE FILMMAKING.</p></div>
+    <div className="preview" aria-label="Illustrative example of a screenplay breakdown"><div className="bar">● ● ● &nbsp; FRAMEWORK / SCENE PREP</div><div className="previewBody"><p className="eyebrow">ILLUSTRATIVE OUTPUT / 01</p><h2>The last light.</h2><div className="scene">INT. COFFEE SHOP — NIGHT<br/>MAYA places a brass key on the table.<br/>JACK watches the door.</div><p className="eyebrow">FROM THE PAGE TO THE FRAME</p><div className="shot"><span>01 / WS</span><div>Establish the space<small>Static wide · Set the geography</small></div></div><div className="shot"><span>02 / CU</span><div>The key changes hands<small>Insert · Emphasize the story detail</small></div></div><div className="shot"><span>03 / OTS</span><div>Hold the tension<small>Over the shoulder · Capture the reaction</small></div></div><p className="caption">SCRIPTED DETAILS + CREATIVE CAMERA SUGGESTIONS</p></div></div></section>
+    <div className="strip">WRITE → BREAK DOWN → PLAN → SHOOT</div><section className="tools" id="tools"><p className="eyebrow">01 / THE TOOLKIT</p><h2>A stronger starting point.<br/>A smoother day on set.</h2><div className="cards"><article><span className="number">01 / BREAK DOWN</span><h3>Find the essentials.</h3><p>Paste a screenplay scene to identify its location, time of day, characters, and props. Spend less time combing through the page.</p></article><article><span className="number">02 / FRAME IT</span><h3>Build the visual plan.</h3><p>Get a suggested shot list with framing, camera movement, and the purpose of each shot. Make the final creative choices yourself.</p></article><article><span className="number">03 / GET READY</span><h3>Arrive with direction.</h3><p>Use practical production notes to prepare your small crew. Turn an overwhelming blank page into an actionable conversation.</p></article></div></section>
+    <section className="offer"><div><p className="eyebrow">02 / MAKE EVERY SHOT COUNT</p><h2>Your next scene starts here.</h2><p>Create an account, open the analyzer, and bring your story.<br/>Explore Pro through Stripe test checkout in your dashboard.</p><p className="caption">COURSE DEMONSTRATION · TEST PAYMENTS ONLY</p></div><Link className="button" href="/auth/sign-up">Create your workspace ↗</Link></section></main><footer><Link className="brand" href="/">FRAMEWORK<span className="accent">.</span></Link><p>Created by Landon Clarken · ENG 310 · 2026</p><Link href="/auth/sign-in">Already a filmmaker here? Log in →</Link></footer>
+  </div>;
 }
