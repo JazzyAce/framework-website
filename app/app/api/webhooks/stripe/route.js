@@ -35,7 +35,7 @@ export async function POST(request) {
     );
   }
 
-  if (event.type === "checkout.session.completed") {
+  if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") {
     const checkout = event.data.object;
 
     if (checkout.payment_status !== "paid") {
